@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../genericNBitAdder.srcs/sources_1/new/nBitAdder.vhd" \
+"../../../../genericNBitAdder.srcs/sources_1/new/testBench.vhd" \
+
+# Do not sort compile order
+nosort
