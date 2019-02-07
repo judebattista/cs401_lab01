@@ -26,6 +26,7 @@ ARCHITECTURE behavior OF testAdder IS
    signal sum : std_logic_vector(3 downto 0) := (others => '0');
    signal cout : std_logic;
    signal intSum : integer;
+   signal carryVector : std_logic_vector(0 downto 0) := (others => '0');
 BEGIN
    uut: adder PORT MAP ( a => a, b => b, cin => cin, sum => sum, cout => cout );
  
@@ -36,16 +37,20 @@ BEGIN
           a <= std_logic_vector(to_unsigned(i, 4));
           for j in 0 to 15 loop
             b <= std_logic_vector(to_unsigned(j, 4));
-            -- cin = 0
-            cin <= '0';
-            wait for 5 ns;
-            intSum <= to_integer(unsigned(sum));
-            assert intSum = (i + j) mod 16 report "Failed for " &integer'image(i) & " and " & integer'image(j)& " and cin = 0";
-            -- cin = 1
-            --cin <= '0';
-            --wait for 5 ns;
-            -- convert y to int
-            -- assert that y = i + j + cin
+            for k in 0 to 1 loop
+                carryVector <= std_logic_vector(to_unsigned(k, 1));
+                wait for 1 ns;
+                cin <= carryVector(0);
+                wait for 1 ns;
+                intSum <= to_integer(unsigned(sum));
+                wait for 1 ns;
+                assert intSum = (i + j + k) mod 16 report "Failed intSum for " & integer'image(i) & " and " & integer'image(j)& " and cin = " & integer'image(k) & ". intSum was " & integer'image(intSum);
+                if (i + j + k > 15) then
+                    assert cout = '1' report "Failed cout for " & integer'image(i) & " and " & integer'image(j)& " and cin = " & integer'image(k) & ". intSum was " & integer'image(intSum);
+                else
+                    assert cout = '0' report "Failed cout for " & integer'image(i) & " and " & integer'image(j)& " and cin = " & integer'image(k) & ". intSum was " & integer'image(intSum);
+                end if;
+            end loop;
           end loop;
       end loop;
       wait;

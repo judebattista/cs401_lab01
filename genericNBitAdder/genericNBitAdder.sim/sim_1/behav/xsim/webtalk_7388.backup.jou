@@ -2,11 +2,11 @@
 # Webtalk v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Wed Feb  6 15:46:49 2019
-# Process ID: 7496
+# Start of session at: Wed Feb  6 10:08:10 2019
+# Process ID: 7388
 # Current directory: Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim/xsim.dir/adder_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim/xsim.dir/testAdder_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim/xsim.dir/adder_behav/webtalk/xsim_webtalk.tcl -notrace
+source Z:/CS-401-1-CompArch/Lab01/genericNBitAdder/genericNBitAdder.sim/sim_1/behav/xsim/xsim.dir/testAdder_behav/webtalk/xsim_webtalk.tcl -notrace
