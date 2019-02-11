@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Wed Feb  6 16:38:54 2019
-| Host             : LAB-SCI-214-11 running 64-bit major release  (build 9200)
+| Date             : Sun Feb 10 19:38:26 2019
+| Host             : LAB-SCI-214-01 running 64-bit major release  (build 9200)
 | Command          : report_power -file alu_power_routed.rpt -pb alu_power_summary_routed.pb -rpx alu_power_routed.rpx
 | Design           : alu
 | Device           : xc7a100tcsg324-1

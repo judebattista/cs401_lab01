@@ -20,19 +20,17 @@ begin
 	-- generate muxen to choose between A/~A and B/~B
 	aout <= a when ( op(4) = '0' ) else not a;
     bout <= b when ( op(3) = '0' ) else not b;
-    sum <= aout + bout + op(4) + op(3);  -- 2's complement depends on op(4) for A and op(3) for B
+    sum <= aout + bout + (op(4) or  op(3));  -- 2's complement depends on op(4) for A and op(3) for B
 	compareBit <= sum(N-1);
-	equality <= sum - ((N-1 downto 1 => '0') & '1');
+	equality <= b-a;
 	equalityBit <= equality(N-1);
-	--uselessSum <= b - a;  -- only used when op(3) == 1 and only used for inequalities
-	--gtbit <= uselessSum(N-1);
-	--gtbit <= '1';
 	  
     process ( a, b, op(4 downto 0), sum, equality, aout, bout, compareBit, equalityBit)
     begin
 		--y <= (others => 'X');  -- y starts all X's, then if a valid op code is given, it gets overwritten
         case op(4 downto 0) is 
-            when "00000" => y <= aout and bout;  -- a && b
+            --when "00000" => y <= aout and bout;  -- a && b
+            when "00000" => y <= aout;  -- a && b
 			when "01000" => y <= aout and bout;  -- a && ~b
 			when "10000" => y <= aout and bout;  -- ~a && b
 			when "11000" => y <= aout and bout;  -- ~a && ~b
@@ -47,8 +45,12 @@ begin
 			when "10011" => y <= (N-1 downto 1 => '0') & compareBit;                -- a > b
 			when "01100" => y <= (N-1 downto 1 => '0') & not compareBit;            -- a >= b
 			when "10100" => y <= (N-1 downto 1 => '0') & not compareBit;            -- a <= b
-			when "01101" => y <= (N-1 downto 1 => '0') & equalityBit;  				-- a == b
-			when "01110" => y <= (N-1 downto 1 => '0') & not equalityBit;      		-- a != b
+            when "01101" => y <= (N-1 downto 1 => '0') & (compareBit and equalityBit);      -- a == b
+			when "01110" => y <= (N-1 downto 1 => '0') & not(compareBit and equalityBit);     -- a != b
+			when "00111" => y <= aout xor bout;  -- a xor b
+			when "01111" => y <= aout xor bout;  -- a xor ~b
+			when "10111" => y <= aout xor bout;  -- ~a xor b
+			when "11111" => y <= aout xor bout;  -- ~a xor ~b
 			when others => y <= (others => 'X');
 		end case;
     end process;
@@ -65,4 +67,5 @@ end Behavioral;
 -- a >= b 1100 check
 -- a == b 1101 check
 -- a != b 1110 check
+-- a xor b XX111 check
 -------------------------------------------------

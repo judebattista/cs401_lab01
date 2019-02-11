@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549561735">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549867214">
   <File Type="PA-TCL" Name="nBitAlu.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="nBitAlu_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="nBitAlu_reports.tcl"/>

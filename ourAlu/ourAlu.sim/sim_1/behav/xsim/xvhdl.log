@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/jbattista20/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.srcs/sources_1/new/nBitAlu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity nBitAlu
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/jbattista20/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.srcs/sim_1/new/ourAluTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testAlu

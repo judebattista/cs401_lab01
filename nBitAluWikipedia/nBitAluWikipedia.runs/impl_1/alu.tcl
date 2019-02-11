@@ -67,16 +67,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/jbattista20/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8020-LAB-SCI-214-11/incrSyn
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir Z:/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.cache/wt [current_project]
-  set_property parent.project_path Z:/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.xpr [current_project]
-  set_property ip_output_repo Z:/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.cache/ip [current_project]
+  set_property webtalk.parent_dir Z:/jbattista20/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.cache/wt [current_project]
+  set_property parent.project_path Z:/jbattista20/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.xpr [current_project]
+  set_property ip_output_repo Z:/jbattista20/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet Z:/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.runs/synth_1/alu.dcp
+  add_files -quiet Z:/jbattista20/CS-401-1-CompArch/Lab01/nBitAluWikipedia/nBitAluWikipedia.runs/synth_1/alu.dcp
   link_design -top alu -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
