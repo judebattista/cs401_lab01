@@ -45,8 +45,8 @@ begin
 			when "10011" => y <= (N-1 downto 1 => '0') & compareBit;                -- a > b
 			when "01100" => y <= (N-1 downto 1 => '0') & not compareBit;            -- a >= b
 			when "10100" => y <= (N-1 downto 1 => '0') & not compareBit;            -- a <= b
-            when "01101" => y <= (N-1 downto 1 => '0') & (compareBit and equalityBit);      -- a == b
-			when "01110" => y <= (N-1 downto 1 => '0') & not(compareBit and equalityBit);     -- a != b
+            when "01101" => y <= (N-1 downto 1 => '0') & not(compareBit or equalityBit);      -- a == b
+			when "01110" => y <= (N-1 downto 1 => '0') & (compareBit or equalityBit);     -- a != b
 			when "00111" => y <= aout xor bout;  -- a xor b
 			when "01111" => y <= aout xor bout;  -- a xor ~b
 			when "10111" => y <= aout xor bout;  -- ~a xor b

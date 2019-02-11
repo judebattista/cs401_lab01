@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Sun Feb 10 22:48:25 2019
+| Date             : Sun Feb 10 23:26:56 2019
 | Host             : LAB-SCI-214-01 running 64-bit major release  (build 9200)
 | Command          : report_power -file nBitAlu_power_routed.rpt -pb nBitAlu_power_summary_routed.pb -rpx nBitAlu_power_routed.rpx
 | Design           : nBitAlu
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 18.586 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 18.589 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 18.062                           |
+| Dynamic (W)              | 18.065                           |
 | Device Static (W)        | 0.523                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.2                              |
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.890 |      212 |       --- |             --- |
+| Slice Logic    |     0.891 |      212 |       --- |             --- |
 |   LUT as Logic |     0.823 |      162 |     63400 |            0.26 |
 |   CARRY4       |     0.067 |       16 |     15850 |            0.10 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     1.788 |      215 |       --- |             --- |
-| I/O            |    15.384 |      101 |       210 |           48.10 |
+| Signals        |     1.789 |      215 |       --- |             --- |
+| I/O            |    15.386 |      101 |       210 |           48.10 |
 | Static Power   |     0.523 |          |           |                 |
-| Total          |    18.586 |          |           |                 |
+| Total          |    18.589 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,7 +69,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     3.309 |       2.954 |      0.354 |
+| Vccint    |       1.000 |     3.310 |       2.955 |      0.355 |
 | Vccaux    |       1.800 |     1.301 |       1.237 |      0.064 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -136,7 +136,7 @@ Table of Contents
 +---------+-----------+
 | Name    | Power (W) |
 +---------+-----------+
-| nBitAlu |    18.062 |
+| nBitAlu |    18.065 |
 +---------+-----------+
 
 

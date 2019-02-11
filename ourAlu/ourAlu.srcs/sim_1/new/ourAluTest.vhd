@@ -11,7 +11,7 @@ ENTITY testAlu IS
 END testAlu;
  
 ARCHITECTURE behavior OF testAlu IS 
-    COMPONENT alu
+    COMPONENT nBitAlu
         generic (N : integer := 4);
         port ( a, b: in STD_LOGIC_VECTOR( N-1 downto 0 );
                 op: in STD_LOGIC_VECTOR;
@@ -24,9 +24,9 @@ ARCHITECTURE behavior OF testAlu IS
    signal op : STD_LOGIC_VECTOR(4 downto 0);
    
    --Outputs
-   signal y : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
+   signal y : STD_LOGIC_VECTOR(3 downto 0) := (others => 'X');
 BEGIN
-    uut: alu PORT MAP ( a => a, b => b, op => op, y => y );
+    uut: nBitAlu PORT MAP ( a => a, b => b, op => op, y => y );
 
     stim_proc: process
         begin
@@ -117,7 +117,7 @@ BEGIN
             assert y = "0001" report "Failed A != B (!=)";
             b <= "1010";
             wait for 1 ns;
-            assert y = "0001" report "Failed A != ~B (==)";
+            assert y = "0000" report "Failed A != ~B (==)";
             b <= "1011";
             wait for 1 ns;
                         

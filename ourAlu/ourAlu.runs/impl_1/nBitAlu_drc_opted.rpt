@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sun Feb 10 22:47:46 2019
+| Date         : Sun Feb 10 23:26:14 2019
 | Host         : LAB-SCI-214-01 running 64-bit major release  (build 9200)
 | Command      : report_drc -file nBitAlu_drc_opted.rpt -pb nBitAlu_drc_opted.pb -rpx nBitAlu_drc_opted.rpx
 | Design       : nBitAlu
