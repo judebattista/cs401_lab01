@@ -60,24 +60,20 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/jbattista20/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8420-LAB-SCI-214-01/incrSyn
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir Z:/jbattista20/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.cache/wt [current_project]
-  set_property parent.project_path Z:/jbattista20/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.xpr [current_project]
-  set_property ip_output_repo Z:/jbattista20/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.cache/ip [current_project]
+  set_property webtalk.parent_dir Z:/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.cache/wt [current_project]
+  set_property parent.project_path Z:/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.xpr [current_project]
+  set_property ip_output_repo Z:/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet Z:/jbattista20/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.runs/synth_1/nBitAlu.dcp
+  add_files -quiet Z:/CS-401-1-CompArch/Lab01/ourAlu/ourAlu.runs/synth_1/nBitAlu.dcp
   link_design -top nBitAlu -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

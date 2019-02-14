@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549869933">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549905361">
   <File Type="BITSTR-BMM" Name="nBitAlu_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="nBitAlu_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="nBitAlu_timing_summary_init.rpt"/>

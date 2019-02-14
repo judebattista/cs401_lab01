@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date                      : Sun Feb 10 23:26:18 2019
-| Host                      : LAB-SCI-214-01 running 64-bit major release  (build 9200)
+| Date                      : Mon Feb 11 09:16:44 2019
+| Host                      : LAB-SCI-214-15 running 64-bit major release  (build 9200)
 | Command                   : report_io -file nBitAlu_io_placed.rpt
 | Design                    : nBitAlu
 | Device                    : xc7a100t

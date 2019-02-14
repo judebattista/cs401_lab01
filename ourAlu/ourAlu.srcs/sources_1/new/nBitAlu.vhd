@@ -27,10 +27,8 @@ begin
 	  
     process ( a, b, op(4 downto 0), sum, equality, aout, bout, compareBit, equalityBit)
     begin
-		--y <= (others => 'X');  -- y starts all X's, then if a valid op code is given, it gets overwritten
         case op(4 downto 0) is 
-            --when "00000" => y <= aout and bout;  -- a && b
-            when "00000" => y <= aout;  -- a && b
+            when "00000" => y <= aout and bout;  -- a && b
 			when "01000" => y <= aout and bout;  -- a && ~b
 			when "10000" => y <= aout and bout;  -- ~a && b
 			when "11000" => y <= aout and bout;  -- ~a && ~b
